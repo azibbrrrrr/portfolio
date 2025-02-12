@@ -1,8 +1,6 @@
-import Image from 'next/image'
 import Link from 'next/link'
 
 import { ProjectMetadata } from '@/lib/projects'
-import { formatDate } from '@/lib/utils'
 
 const toolColors = [
   'bg-blue-500',

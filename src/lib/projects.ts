@@ -27,9 +27,11 @@ export async function getProjectBySlug(slug: string): Promise<Project | null> {
     const { data, content } = matter(fileContent)
     return { metadata: { ...data, slug }, content }
   } catch (error) {
+    console.error(`Error reading project file: ${error}`)
     return null
   }
 }
+
 
 export async function getProjects(limit?: number): Promise<ProjectMetadata[]> {
   const files = fs.readdirSync(rootDirectory)
