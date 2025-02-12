@@ -1,11 +1,10 @@
-import { getProjectBySlug, getProjects } from '@/lib/projects'
+import { getProjectBySlug } from '@/lib/projects'
 import { ArrowLeftIcon } from '@radix-ui/react-icons'
 import Link from 'next/link'
 import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
 import { notFound } from 'next/navigation'
-import { MDXRemote } from 'next-mdx-remote/rsc'
-// import MDXContent from '@/components/mdx-content'
+import MDXContent from '@/components/mdx-content'
 
 export default async function Project({
   params
@@ -51,7 +50,7 @@ export default async function Project({
         </header>
 
         <main className='prose mt-16 dark:prose-invert'>
-          <MDXRemote source={content} />
+          <MDXContent source={content} />
         </main>
       </div>
     </section>
