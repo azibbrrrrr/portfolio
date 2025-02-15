@@ -22,7 +22,7 @@ export default function Header() {
             <Link href='/projects'>Projects</Link>
           </li>
           <li className='transition-colors hover:text-foreground'>
-            <Link href='/contact'>Contact</Link>
+            <Link href='/#footer'>Contact Me</Link>
           </li>
         </ul>
 
