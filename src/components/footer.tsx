@@ -2,13 +2,18 @@ import { JSX, SVGProps } from 'react'
 
 const navigation = [
   {
-    name: 'Azib Iqbal',
-    href: 'https://www.linkedin.com/in/azib-iqbal-84b9a625a/',
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-      <svg fill='currentColor' viewBox='0 0 448 512' {...props}>
+    name: '+60102144281',
+    href: 'tel:+60102144281',
+    icon: () => (
+      <svg
+        xmlns='http://www.w3.org/2000/svg'
+        width={24}
+        height={24}
+        viewBox='0 0 24 24'
+      >
         <path
           fill='currentColor'
-          d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'
+          d='M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99'
         ></path>
       </svg>
     )
@@ -42,23 +47,6 @@ const navigation = [
     )
   },
   {
-    name: '+60102144281',
-    href: 'tel:+60102144281',
-    icon: () => (
-      <svg
-        xmlns='http://www.w3.org/2000/svg'
-        width={24}
-        height={24}
-        viewBox='0 0 24 24'
-      >
-        <path
-          fill='currentColor'
-          d='M20.01 15.38c-1.23 0-2.42-.2-3.53-.56a.98.98 0 0 0-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02c-.37-1.11-.56-2.3-.56-3.53c0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99C3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99'
-        ></path>
-      </svg>
-    )
-  },
-  {
     name: 'azibiqbal01@gmail.com',
     href: 'mailto:azibiqbal01@gmail.com',
     icon: () => (
@@ -74,6 +62,19 @@ const navigation = [
         ></path>
       </svg>
     )
+  },
+
+  {
+    name: 'Azib Iqbal',
+    href: 'https://www.linkedin.com/in/azib-iqbal-84b9a625a/',
+    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+      <svg fill='currentColor' viewBox='0 0 448 512' {...props}>
+        <path
+          fill='currentColor'
+          d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'
+        ></path>
+      </svg>
+    )
   }
 ]
 
@@ -81,20 +82,23 @@ export default function Footer() {
   return (
     <footer className='py-8' id='footer'>
       <div className='container max-w-screen-lg px-4'>
-        <div className='mb-4 grid grid-cols-2 gap-6 border-b pb-4 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4'>
+        <div className='mb-4 grid grid-cols-2 place-items-center gap-2 border-b pb-4 md:grid-cols-2 lg:grid-cols-4'>
           {navigation.map(item => (
             <a
               key={item.name}
               href={item.href}
               target='_blank'
               rel='noreferrer noopener'
-              className='flex items-center justify-center space-x-2 text-muted-foreground hover:text-foreground'
+              className='flex items-center space-x-2 justify-self-center text-muted-foreground hover:text-foreground'
             >
-              <item.icon aria-hidden='true' className='h-5 w-5' />
-              <span className='text-sm'>{item.name}</span>
+              <div className='flex-shrink-0'>
+                <item.icon aria-hidden='true' className='h-5 w-5' />
+              </div>
+              <span className='text-xs'>{item.name}</span>
             </a>
           ))}
         </div>
+
         <div className='text-center'>
           <p className='text-xs leading-5 text-muted-foreground'>
             &copy; {new Date().getFullYear()} AZIB IQBAL | ALL RIGHTS RESERVED.
