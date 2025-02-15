@@ -16,7 +16,7 @@ const navigation = [
   {
     name: 'azibiqbal',
     href: 'https://github.com/azibbrrrrr',
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+    icon: () => (
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={22}
@@ -44,7 +44,7 @@ const navigation = [
   {
     name: '+60102144281',
     href: 'tel:+60102144281',
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+    icon: () => (
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={24}
@@ -61,7 +61,7 @@ const navigation = [
   {
     name: 'azibiqbal01@gmail.com',
     href: 'mailto:azibiqbal01@gmail.com',
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
+    icon: () => (
       <svg
         xmlns='http://www.w3.org/2000/svg'
         width={24}

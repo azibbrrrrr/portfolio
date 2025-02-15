@@ -1,21 +1,4 @@
 import React, { JSX } from 'react'
-import { FaPython, FaJava, FaJsSquare, FaPhp, FaNodeJs } from 'react-icons/fa'
-import {
-  SiNextdotjs,
-  SiSpring,
-  SiFirebase,
-  SiMongodb,
-  SiMysql
-} from 'react-icons/si'
-import { SiTensorflow, SiKeras, SiPytorch, SiHuggingface } from 'react-icons/si'
-import {
-  SiGit,
-  SiFigma,
-  SiUnity,
-  SiAdobeillustrator,
-  SiAdobephotoshop
-} from 'react-icons/si'
-import { BsCodeSquare } from 'react-icons/bs' // Fallback generic icon for missing items
 
 interface SkillCategory {
   category: string

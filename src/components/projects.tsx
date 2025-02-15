@@ -29,15 +29,17 @@ export default function Projects({
               {/* Flex container to display image and text in a row */}
               <div className='flex flex-col items-start sm:flex-row'>
                 {project.image && (
-                  <img
+                  <Image
                     src={project.image}
-                    alt={project.title}
+                    alt={project.title || ''}
+                    width={160}
+                    height={152}
                     className='h-38 mb-3 w-full rounded-md object-cover sm:mb-0 sm:w-40'
                   />
                 )}
 
                 {/* Right Text Content */}
-                <div className='ml-2 flex flex-col'>
+                <div className='ml-4 flex flex-col'>
                   {/* Title with Tools next to it */}
                   <div className='flex flex-col sm:flex-row sm:items-center'>
                     <h2 className='text-2xl font-semibold text-gray-800 transition-colors duration-300 group-hover:text-primary dark:text-white'>
