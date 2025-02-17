@@ -67,13 +67,13 @@ export default function Projects({
                 {/* Summary */}
                 <p className='mt-2 line-clamp-3 text-sm text-muted-foreground transition-colors duration-300 group-hover:text-black dark:text-gray-300 dark:group-hover:text-white'>
                   {project.summary}
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className='flex items-center text-sm font-medium text-blue-500 hover:underline'
-                  >
-                    Learn More
-                  </Link>
                 </p>
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className='flex items-center text-sm font-medium text-blue-500 hover:underline'
+                >
+                  Learn More
+                </Link>
 
                 {/* Link to github, demo and colab notebook */}
                 <div className='mt-2 flex space-x-2'>
