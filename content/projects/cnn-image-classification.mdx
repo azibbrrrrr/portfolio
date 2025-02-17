@@ -1,0 +1,107 @@
+---
+title: CNN-Based Image Classification (CIFAR-10)
+summary: |
+  Developed and optimized a deep CNN model using TensorFlow/Keras on CIFAR-10. Improved test accuracy from 67% to 84% through hyperparameter tuning, batch normalization, and data augmentation.
+image: /images/projects/cnn-cifar10.jpg
+author: 'Azib Iqbal'
+publishedAt: '2024-04-22'
+icon: '🖼️'
+tools:
+  - 'TensorFlow'
+  - 'Keras'
+  - 'Google Colab'
+  - 'Python'
+---
+
+## 🖼️ CNN-Based Image Classification (CIFAR-10)
+
+A deep learning project leveraging **TensorFlow and Keras** to train a CNN model
+for classifying images from the **CIFAR-10 dataset**.
+
+## 🚀 Key Features
+
+- **Baseline CNN Model** – Simple architecture achieving 67% accuracy.
+- **Deep CNN Model** – Optimized architecture improving accuracy to 80%.
+- **Hyperparameter Tuning** – Increased accuracy further to 84%.
+- **Batch Normalization** – Improved training stability and generalization.
+- **Data Augmentation** – Enhanced robustness against overfitting.
+- **Google Colab Execution** – Trained using GPU-accelerated notebooks.
+
+## 🛠 Tech Stack
+
+- **Framework**: TensorFlow, Keras
+- **Development**: Google Colab, Python
+- **Dataset**: CIFAR-10
+
+## 🔬 Hyperparameter Optimization
+
+<Table>
+  <TableCaption>
+    Hyperparameter tuning results for CIFAR-10 classification.
+  </TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Hyperparameter</TableHead>
+      <TableHead>Change Made</TableHead>
+      <TableHead className='text-right'>Test Accuracy</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className='font-medium'>Baseline Model</TableCell>
+      <TableCell>Initial CNN setup</TableCell>
+      <TableCell className='text-right'>67%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Batch Size</TableCell>
+      <TableCell>From 128 to 256</TableCell>
+      <TableCell className='text-right'>69.0%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Increased Epochs</TableCell>
+      <TableCell>From 20 to 40</TableCell>
+      <TableCell className='text-right'>73.3%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Added Layers</TableCell>
+      <TableCell>More conv layers added</TableCell>
+      <TableCell className='text-right'>80.5%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Batch Normalization</TableCell>
+      <TableCell>Applied after conv layers</TableCell>
+      <TableCell className='text-right'>82.2%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Data Augmentation</TableCell>
+      <TableCell>Applied shifts & flips</TableCell>
+      <TableCell className='text-right'>84.0%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Dropout Adjustment</TableCell>
+      <TableCell>Reduced to 0.4</TableCell>
+      <TableCell className='text-right'>82.0%</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## 📊 Results & Discussion
+
+- The initial **simple CNN model** achieved **67% accuracy**, but showed signs
+  of overfitting.
+- **Adding layers and batch normalization** helped stabilize training and
+  improve accuracy.
+- **Data augmentation** played a crucial role in **enhancing generalization**.
+- Optimal dropout balance **prevented overfitting** while maintaining high
+  accuracy.
+
+## 🔗 Report & Colab Notebook
+
+- **Report**: <a
+  href="https://docs.google.com/document/d/166RHLvBjCV3USQRBXvuF1EfVQvph76yGw-AwHLmmq6A/edit?tab=t.0"
+  style={{ color: 'blue' }} target="\_blank" rel="noopener noreferrer">Google
+  Docs</a>
+- **Colab Notebook**: <a
+  href="https://colab.research.google.com/drive/1XLDGUEgvQh0lKbIOnrBhm1CkhwMhN33_?usp=sharing"
+  style={{ color: 'blue' }} target="\_blank" rel="noopener noreferrer">Google
+  Colab Notebook</a>

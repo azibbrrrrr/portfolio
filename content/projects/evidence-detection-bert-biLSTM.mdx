@@ -1,0 +1,123 @@
+---
+title: Evidence Detection Using Bi-LSTM and BERT
+summary:
+  A project focused on evidence detection in text using Bi-LSTM and BERT models.
+image: /images/projects/evidence-detection.jpg
+author: 'Azib Iqbal'
+publishedAt: '2024-04-31'
+icon: '🔎'
+tools:
+  - 'Tensorflow'
+  - 'Keras'
+---
+
+## Introduction
+
+- Trained and evaluated Bi-LSTM and BERT models on a dataset with 23,000+
+  training examples and 4,000+ test instances for evidence detection.
+- Achieved **87.92% accuracy** with BERT, outperforming Bi-LSTM by **6.5%**,
+  demonstrating the effectiveness of transformer-based models for NLP tasks.
+
+## Materials and Methods
+
+- Used TensorFlow for Bi-LSTM implementation and the Transformers library for
+  BERT.
+- Fine-tuned BERT by testing different hyperparameters and training on the full
+  dataset.
+- Processed text sequences bidirectionally for Bi-LSTM, while BERT analyzed
+  context-sensitive relationships.
+
+## Architecture
+
+### Bi-Directional LSTM Architecture
+
+- Dual-input architecture for independent claim and evidence analysis.
+- Each Bi-LSTM layer captures past and future context, enhancing sequential text
+  processing.
+- Outputs are concatenated for an integrated feature set.
+
+<Image
+  src='/images/projects/bi-lstm.jpg'
+  alt='Bi-Directional LSTM Architecture Diagram'
+  width={600}
+  height={300}
+/>
+
+### BERT Architecture
+
+- Processes claims by checking with the document corpus.
+- Extracts relevant sentences and identifies supporting evidence.
+- Transformer layers refine the output through normalization and encoding.
+
+<Image
+  src='/images/projects/bert.jpg'
+  alt='BERT Architecture Diagram'
+  width={600}
+  height={300}
+/>
+
+## Results
+
+The test results showed that:
+
+- Bi-LSTM demonstrated good accuracy and F1 scores.
+- BERT outperformed Bi-LSTM across all evaluation metrics.
+- BERT effectively associated claims with supporting evidence, achieving higher
+  accuracy, F1 score, and MCC.
+
+<Image
+  src='/images/projects/evidence-detection-metrics.jpg'
+  alt='Model Performance Comparison'
+  width={600}
+  height={300}
+/>
+
+<Table>
+  <TableCaption>Performance Metrics Comparison</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Metric</TableHead>
+      <TableHead>Bi-LSTM</TableHead>
+      <TableHead>BERT</TableHead>
+      <TableHead>Improvement</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell className='font-medium'>Accuracy</TableCell>
+      <TableCell>81.44%</TableCell>
+      <TableCell>88.29%</TableCell>
+      <TableCell>+6.85%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>Macro-F1</TableCell>
+      <TableCell>74.87%</TableCell>
+      <TableCell>84.98%</TableCell>
+      <TableCell>+10.11%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>W Macro-F1</TableCell>
+      <TableCell>80.78%</TableCell>
+      <TableCell>88.22%</TableCell>
+      <TableCell>+7.44%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell className='font-medium'>MCC</TableCell>
+      <TableCell>50.39%</TableCell>
+      <TableCell>69.98%</TableCell>
+      <TableCell>+19.59%</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Conclusion
+
+BERT's contextually rich model proved more effective than Bi-LSTM for evidence
+detection, emphasizing the importance of contextual understanding in NLP tasks.
+
+## References
+
+- Brownlee, J. "Develop Bidirectional LSTM Sequence Classification in Python
+  with Keras." Retrieved from
+  [Machine Learning Mastery](https://machinelearningmastery.com/develop-bidirectional-lstm-sequence-classification-python-keras/)
+- Ravichandiran, S. "Getting Started with Google BERT." Packt Publishing, 2021.

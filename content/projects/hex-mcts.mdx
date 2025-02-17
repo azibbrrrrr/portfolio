@@ -1,0 +1,118 @@
+---
+title: 'AI for Hex Board Game'
+description: 'AI and Games Group Project - University of Manchester, UK'
+summary:
+  Developed an AI agent using Monte Carlo Tree Search (MCTS) to optimize
+  decision-making speed and efficiency in Hex gameplay.
+image: /images/projects/ai-hex.png
+author: 'Azib Iqbal'
+publishedAt: '2023-12-15'
+icon: '♟️'
+tools:
+  - 'Python'
+  - 'Monte Carlo Tree Search (MCTS)'
+---
+
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from '@/components/ui/table'
+
+import Image from 'next/image'
+
+## Introduction
+
+- **Developed an AI agent** using **Monte Carlo Tree Search (MCTS)**, optimizing
+  decision-making in the Hex board game.
+- Collaborated with a **team of 4** to design and test the AI against bot
+  agents, refining its strategies for improved performance.
+- Implemented a **swap policy** to enhance gameplay efficiency when playing
+  second.
+- Achieved a **high win rate** against various bot opponents through adaptive
+  decision-making.
+
+## Features
+
+### Swap Policy
+
+- The agent intelligently decides whether to **swap colors** based on predefined
+  board positions.
+- Prioritizes central and elongated placements that could favor the opponent.
+- If the opponent’s first move is in a critical position, the agent swaps to
+  **gain a strategic advantage**.
+
+### Monte Carlo Tree Search (MCTS) for Decision-Making
+
+- The agent uses **MCTS** to evaluate potential moves by running multiple
+  simulations per turn.
+- **Four key steps in MCTS:**
+  1. **Selection:** Prioritizes moves balancing success probability and
+     exploration.
+  2. **Expansion:** Adds new game states to the search tree.
+  3. **Simulation (Rollout):** Runs random or heuristic-based playouts to assess
+     move quality.
+  4. **Backpropagation:** Updates statistics based on simulation results to
+     improve decision-making.
+- By simulating **thousands of games**, the agent **strategically blocks
+  opponents, builds strong connections, and optimizes board control**.
+
+## AI Performance Against Bot Agents
+
+<Table>
+  <TableCaption>AI MCST Agent Performance vs. Bot Opponents</TableCaption>
+  <TableHeader>
+    <TableRow>
+      <TableHead>Opponent</TableHead>
+      <TableHead>Win Rate (%)</TableHead>
+    </TableRow>
+  </TableHeader>
+  <TableBody>
+    <TableRow>
+      <TableCell>Alice</TableCell>
+      <TableCell>89%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Bob</TableCell>
+      <TableCell>92%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Jimmie</TableCell>
+      <TableCell>85%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Joni</TableCell>
+      <TableCell>88%</TableCell>
+    </TableRow>
+    <TableRow>
+      <TableCell>Rita</TableCell>
+      <TableCell>91%</TableCell>
+    </TableRow>
+  </TableBody>
+</Table>
+
+## Results
+
+- Successfully **implemented an AI agent** capable of competing at a high level
+  in Hex.
+- Demonstrated **strong algorithmic optimization** with an adaptive strategy for
+  different opponents.
+- Achieved an **average win rate of ~89%** across five different bot opponents.
+
+## Future Improvements
+
+- Implement **deep learning techniques** to further refine decision-making.
+- Enhance **adaptive learning** to dynamically adjust strategies against human
+  players.
+- Extend AI capabilities to support larger board sizes and variations of Hex.
+
+## References
+
+- Monte Carlo Tree Search:
+  [https://en.wikipedia.org/wiki/Monte_Carlo_tree_search](https://en.wikipedia.org/wiki/Monte_Carlo_tree_search)
+- Hex Board Game Rules:
+  [https://en.wikipedia.org/wiki/Hex\_(board_game)](<https://en.wikipedia.org/wiki/Hex_(board_game)>)

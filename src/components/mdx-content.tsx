@@ -1,8 +1,18 @@
 import { JSX } from 'react'
 import { highlight } from 'sugar-high'
 import { MDXRemote, MDXRemoteProps } from 'next-mdx-remote/rsc'
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow
+} from '@/components/ui/table'
 
 import Counter from '@/components/counter'
+import Image from 'next/image'
 
 function Code({ children, ...props }: { children: string }) {
   const codeHTML = highlight(children)
@@ -11,7 +21,15 @@ function Code({ children, ...props }: { children: string }) {
 
 const components = {
   code: Code,
-  Counter
+  Counter,
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+  Image
 }
 
 export default function MDXContent(

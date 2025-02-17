@@ -3,7 +3,7 @@ import { getProjects } from '@/lib/projects'
 import Projects from '@/components/projects'
 
 export default async function RecentProjects() {
-  const projects = await getProjects(2)
+  const projects = await getProjects(10)
 
   return (
     <section className='pb-24'>
@@ -15,7 +15,7 @@ export default async function RecentProjects() {
           href='/projects'
           className='mt-8 inline-flex items-center gap-2 text-muted-foreground underline decoration-1 underline-offset-2 transition-colors hover:text-foreground'
         >
-          {/* <span>All projects</span> */}
+          <span>All projects</span>
         </Link>
       </div>
     </section>

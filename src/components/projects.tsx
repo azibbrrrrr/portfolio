@@ -39,16 +39,16 @@ export default function Projects({
                 )}
 
                 {/* Right Text Content */}
-                <div className='ml-4 flex flex-col'>
+                <div className='flex flex-col sm:ml-4'>
                   {/* Title with Tools next to it */}
-                  <div className='flex flex-col sm:items-center sm:text-center'>
+                  <div className='flex flex-col items-start'>
                     <h2 className='text-2xl font-semibold text-gray-800 transition-colors duration-300 group-hover:text-primary dark:text-white'>
                       {project.title}
                     </h2>
 
-                    {/* Tools List - Positioned below the title*/}
+                    {/* Tools List - Positioned below the title on mobile, to the right on larger screens */}
                     {project.tools && project.tools.length > 0 && (
-                      <div className='flex flex-wrap gap-2'>
+                      <div className='mt-0 flex flex-wrap gap-2 md:mt-2'>
                         {project.tools.map((tool, index) => (
                           <span
                             key={tool}
