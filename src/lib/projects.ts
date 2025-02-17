@@ -11,6 +11,7 @@ export type Project = {
 
 export type ProjectMetadata = {
   title?: string
+  type?: string
   summary?: string
   image?: string
   author?: string
@@ -18,6 +19,9 @@ export type ProjectMetadata = {
   icon?: string
   slug: string
   tools?: string[]  // List of tools used in the project
+  github?: string
+  demo?: string
+  colab?: string
 }
 
 export async function getProjectBySlug(slug: string): Promise<Project | null> {
