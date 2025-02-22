@@ -42,9 +42,12 @@ export default function Projects({
               <div className='flex flex-grow flex-col'>
                 {/* Title with Tools next to it */}
                 <div className='flex flex-col items-start'>
-                  <h2 className='text-2xl font-semibold text-gray-800 transition-colors duration-300 group-hover:text-primary dark:text-white'>
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className='text-2xl font-semibold text-gray-800 transition-colors duration-300 hover:underline group-hover:text-primary dark:text-white'
+                  >
                     {project.title}
-                  </h2>
+                  </Link>
                   <p className='text-sm font-medium text-gray-600 dark:text-gray-400'>
                     {project.type}
                   </p>

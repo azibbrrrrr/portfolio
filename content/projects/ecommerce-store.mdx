@@ -2,8 +2,7 @@
 title: E-Commerce Store
 type: Personal Project(In Progress)
 summary: |
-  Developing a full-stack e-commerce platform using Next.js, Prisma and Stripe API, featuring an admin dashboard, cart system,
-  and secure checkout functionality.
+  Developed a full-stack e-commerce platform using Next.js, Prisma, PostgreSQL, and Stripe API, featuring an admin dashboard, cart system, and secure checkout functionality.
 image: /images/projects/ecommerce-store.jpeg
 author: 'Azib Iqbal'
 publishedAt: '2025-02-10'
@@ -12,7 +11,10 @@ tools:
   - 'Next.js'
   - 'Prisma'
   - 'Stripe'
-github: 'https://github.com/azibbrrrrr/portfolio'
+  - 'PostgreSQL'
+  - 'SendGrid'
+github: 'https://github.com/azibbrrrrr/swishfit'
+demo: 'https://rendunks.vercel.app/'
 ---
 
 ## 🛒 Rendunks E-Commerce Store
@@ -22,23 +24,31 @@ sell **physical products (fake)** related to the Rendunks basketball team.
 
 ## 🚀 Key Features
 
-- **Stripe Payments** – Secure checkout using the Stripe API.
-- **Product Catalog** – Browse and view products in a grid layout.
-- **Shopping Cart** – Add items to the cart and complete purchases.
-- **Admin Dashboard** – Manage products with CRUD functionality.
-- **No Authentication** – Users can purchase without creating an account.
+- **Stripe Payments** – Implemented secure checkout using Stripe API to handle
+  online transactions seamlessly. Configured payment intents and webhook
+  listeners for real-time updates on successful or failed payments.
+- **Product Catalog & Inventory Management** – Products are stored in a
+  structured **PostgreSQL** database, ensuring efficient queries and scalable
+  storage. Integrated Prisma ORM for smooth database interactions and automatic
+  migrations.
+- **Shopping Cart & Order System** – Users can add items to the cart and
+  complete purchases. Orders are securely stored and tracked in the database.
+- **Admin Dashboard** – Designed an intuitive admin panel to manage products
+  with **CRUD functionality**, customer tracking, and sales analytics.
+- **Automated Email Notifications** – Integrated **SendGrid Email API** to send
+  order confirmations automatically, improving customer engagement and
+  reliability.
+- **No Authentication** – Users can purchase without creating an account,
+  streamlining the buying process.
 
 ## 🛠 Tech Stack
 
 - **Frontend**: Next.js, Tailwind CSS
-- **Backend**: Prisma, Stripe API
+- **Backend**: Prisma, Stripe API, SendGrid
+- **Database**: PostgreSQL (hosted on a SUPABASE serverless platform)
 - **Deployment**: Vercel
-
-## 📸 Screenshots / Demo
-
-_(Include images or GIFs showcasing the UI and checkout process.)_
 
 ## 🔗 GitHub & Live Demo
 
-- **GitHub**: [Your Repo Link]
-- **Live Demo**: [Your Deployed Link]
+- **GitHub**: [Github link](https://github.com/azibbrrrrr/swishfit)
+- **Live Demo**: [Live Demo deployed on Vercel](https://rendunks.vercel.app/)
